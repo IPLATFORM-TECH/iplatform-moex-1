@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: DEV-1
+      id: 007-create-table-security-group
       author: roman
       changes:
         - createTable:
