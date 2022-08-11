@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: DEV-1
+      id: 002-create-table-engine
       author: roman
       changes:
         - createTable:
