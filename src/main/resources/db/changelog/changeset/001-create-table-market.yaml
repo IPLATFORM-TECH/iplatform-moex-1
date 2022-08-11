@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 001create-table-market.yaml
+      id: 001-create-table-market
       author: roman
       changes:
         - createTable:
