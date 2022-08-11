@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: DEV-1
+      author: roman
+      changes:
+        - createTable:
+            tableName: security_group
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(93)
+              - column:
+                  name: title
+                  type: varchar(765)
+              - column:
+                  name: is_hidden
+                  type: integer
