@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: DEV-1
+      id: 006create-table-duration.yaml
       author: roman
       changes:
         - createTable:
