@@ -6,11 +6,13 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "security_type")
 @Getter
 @Setter
 public class SecurityType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Integer id;
 
     @Column(name = "trade_engine_id")
