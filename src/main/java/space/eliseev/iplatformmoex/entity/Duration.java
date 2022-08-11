@@ -6,11 +6,13 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "duration")
 @Getter
 @Setter
 public class Duration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "interval")
     private Integer interval;
 
     @Column(name = "duration")
