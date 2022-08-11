@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 005create-table-security-type.yaml
+      id: 005-create-table-security-type
       author: roman
       changes:
         - createTable:
