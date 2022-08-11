@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 004create-board-group.yaml
+      id: 004-create-board-group
       author: roman
       changes:
         - createTable:
