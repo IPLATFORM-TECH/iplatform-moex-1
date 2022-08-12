@@ -3,9 +3,9 @@ spring:
     name: iplatform-moex
   datasource:
     driverClassName: org.postgresql.Driver
-    username: @db-username@
-    password: @db-password@
-    url: @db-url@
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/postgres
   jpa:
     hibernate:
       ddl-auto: validate
