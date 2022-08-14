@@ -12,7 +12,6 @@ import javax.persistence.*;
 public class SecurityCollection {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "name", length = 96)

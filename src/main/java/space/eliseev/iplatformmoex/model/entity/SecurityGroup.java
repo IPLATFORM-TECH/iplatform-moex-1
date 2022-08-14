@@ -11,7 +11,6 @@ import java.util.Collection;
 public class SecurityGroup {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "name")
