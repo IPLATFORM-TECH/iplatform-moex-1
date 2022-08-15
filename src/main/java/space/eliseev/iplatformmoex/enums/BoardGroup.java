@@ -1,5 +1,9 @@
 package space.eliseev.iplatformmoex.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
 public enum BoardGroup {
     STOCK_SHARES_REPO("stock_shares_repo"),
     STOCK_BOND_REPO("stock_bond_repo"),
@@ -199,11 +203,7 @@ public enum BoardGroup {
     STOCK_NONRESMAMC_LIQ("stock_nonresmamc_liq"),
     AGRO_BUYAUCTIONS_ALL("agro_buyauctions_all");
 
+    @Getter
     private final String name;
-    BoardGroup(String name){
-        this.name = name;
-    }
-    public String getName(){
-        return name;
-    }
+
 }
