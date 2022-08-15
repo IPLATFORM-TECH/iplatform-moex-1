@@ -1,11 +1,14 @@
 package space.eliseev.iplatformmoex.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Collection;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "Board")
 public class Board {
@@ -15,16 +18,19 @@ public class Board {
     @Column(name = "id")
     private int id;
 
-    @OneToMany
-    @JoinColumn(name = "board_group_id")
+//    @OneToMany
+//    @JoinColumn(name = "board_group_id")
+    @Column(name = "board_group_id")
     private Collection<BoardGroup> boardGroup;
 
-    @OneToMany
-    @JoinColumn(name = "engine_id")
+//    @OneToMany
+//    @JoinColumn(name = "engine_id")
+    @Column(name = "engine_id")
     private Collection<Engine> engine;
 
-    @OneToMany
-    @JoinColumn(name = "market_id")
+//    @OneToMany
+//    @JoinColumn(name = "market_id")
+    @Column(name = "market_id")
     private Collection<Market> market;
 
     @Column(name = "boardid")
