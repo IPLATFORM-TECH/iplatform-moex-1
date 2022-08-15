@@ -48,5 +48,5 @@ public enum SecurityType {
     OPTION("option"),
     OPTION_ON_SHARES("option_on_shares");
 
-    private final String securityTypeName;
+    private final String name;
 }
