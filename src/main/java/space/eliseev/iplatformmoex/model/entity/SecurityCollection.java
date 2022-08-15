@@ -25,7 +25,7 @@ public class SecurityCollection {
     private String title;
 
     @ManyToOne
-    @JoinColumn(name = "security_group_id")
+    @JoinColumn(name = "security_group_id", referencedColumnName = "id")
     private SecurityGroup securityGroup;
 
 }
