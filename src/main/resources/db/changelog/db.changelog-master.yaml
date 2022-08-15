@@ -4,4 +4,5 @@ databaseChangeLog:
       file: db/changelog/changeset/002-create-table-engine.yaml
       file: db/changelog/changeset/003-create-table-board.yaml 
       file: db/changelog/changeset/004-create-table-board-group.yaml
+      file: db/changelog/changeset/005-create-table-security-type.yaml
       file: db/changelog/changeset/007-create-table-security-group.yaml
