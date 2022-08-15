@@ -1,5 +1,10 @@
 package space.eliseev.iplatformmoex.model.enumeration;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
 public enum SecurityGroup {
 
     STOCK_INDEX("stock_index"),
@@ -22,11 +27,4 @@ public enum SecurityGroup {
     STOCK_MORTGAGE("stock_mortgage");
 
     private final String name;
-    SecurityGroup(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
 }
