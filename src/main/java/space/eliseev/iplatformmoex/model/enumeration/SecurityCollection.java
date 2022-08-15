@@ -1,5 +1,10 @@
 package space.eliseev.iplatformmoex.model.enumeration;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
 public enum SecurityCollection {
 
     STOCK_INDEX_ALL("stock_index_all"),
@@ -105,12 +110,5 @@ public enum SecurityCollection {
     CURRENCY_INDICES_ALL("currency_indices_all");
 
     private final String name;
-    SecurityCollection(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
 
 }
