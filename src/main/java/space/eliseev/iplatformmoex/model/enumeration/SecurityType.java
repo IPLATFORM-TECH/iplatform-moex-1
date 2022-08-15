@@ -1,5 +1,10 @@
 package space.eliseev.iplatformmoex.model.enumeration;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
 public enum SecurityType {
 
     COMMON_SHARE("common_share"),
@@ -44,10 +49,4 @@ public enum SecurityType {
     OPTION_ON_SHARES("option_on_shares");
 
     private final String securityTypeName;
-    SecurityType(String securityTypeName){
-        this.securityTypeName = securityTypeName;
-    }
-    public String getSecurityTypeName(){
-        return securityTypeName;
-    }
 }
