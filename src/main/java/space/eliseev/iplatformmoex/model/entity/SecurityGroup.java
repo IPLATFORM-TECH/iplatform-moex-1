@@ -1,12 +1,15 @@
 package space.eliseev.iplatformmoex.model.entity;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "security_group")
 public class SecurityGroup {
 
