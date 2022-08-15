@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-table-market
+      author: roman
+      changes:
+        - createTable:
+            tableName: market
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: trade_engine_name
+                  type: varchar(45)
+              - column:
+                  name: trade_engine_title
+                  type: varchar(765)
+              - column:
+                  name: market_name
+                  type: varchar(45)
+              - column:
+                  name: market_title
+                  type: varchar(765)
+              - column:
+                  name: market_id
+                  type: integer
+              - column:
+                  name: marketplace
+                  type: varchar(48)
+              - column:
+                  name: is_otc
+                  type: integer
