@@ -5,4 +5,5 @@ databaseChangeLog:
       file: db/changelog/changeset/003-create-table-board.yaml 
       file: db/changelog/changeset/004-create-table-board-group.yaml
       file: db/changelog/changeset/005-create-table-security-type.yaml
+      file: db/changelog/changeset/006-create-table-duration.yaml
       file: db/changelog/changeset/008-create-table-security-collection.yaml
