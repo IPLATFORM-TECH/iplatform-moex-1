@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 
@@ -26,8 +24,7 @@ public class SecurityCollection {
     @Column(name = "title", length = 765)
     private String title;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @Fetch(FetchMode.JOIN)
+    @ManyToOne
     @JoinColumn(name = "security_group_id")
     private SecurityGroup securityGroup;
 
