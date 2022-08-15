@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public enum Markets {
+public enum Market {
     SHARES("shares"),
     BONDS("bonds"),
     REPO("repo"),
