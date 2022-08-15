@@ -1,5 +1,10 @@
 package space.eliseev.iplatformmoex.model.enumeration;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@Getter
+@RequiredArgsConstructor
 public enum Engine {
 
     STOCK("stock"),
@@ -13,10 +18,4 @@ public enum Engine {
     OTC("otc");
 
     private final String name;
-    Engine(String name){
-        this.name = name;
-    }
-    public String getName(){
-        return name;
-    }
 }
