@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: XXX-create-table-check_metadata
+      id: 008-create-table-check_metadata
       author: Vasiliy Ivanchin
       changes:
         - createTable:
