@@ -13,25 +13,13 @@ databaseChangeLog:
                     primaryKey: true
               - column:
                   name: timestamp
+                  remarks: Дата проверки
                   type: timestamp
               - column:
                   name: index
+                  remarks: Справочник
                   type: varchar
               - column:
                   name: is_valid
+                  remarks: Результат проверки
                   type: boolean
-        - setColumnRemarks:
-            columnName: timestamp
-            remarks: Дата проверки
-            schemaName: iplatform-moex
-            tableName: check_metadata
-        - setColumnRemarks:
-            columnName: index
-            remarks: Справочник
-            schemaName: iplatform-moex
-            tableName: check_metadata
-        - setColumnRemarks:
-            columnName: is_valid
-            remarks: Результат проверки
-            schemaName: iplatform-moex
-            tableName: check_metadata
