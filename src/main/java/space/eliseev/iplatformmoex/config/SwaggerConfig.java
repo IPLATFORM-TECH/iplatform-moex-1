@@ -12,7 +12,7 @@ public class SwaggerConfig {
         return new OpenAPI()
                 .info(
                         new Info()
-                                .title("iplatform-moex")
+                                .title("API Московской биржи")
                 );
     }
 }
