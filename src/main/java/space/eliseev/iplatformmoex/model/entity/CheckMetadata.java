@@ -6,10 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Comment;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
@@ -21,17 +18,15 @@ import java.time.LocalDateTime;
 public class CheckMetadata {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "timestamp")
-    @Comment("Дата проверки")
     private LocalDateTime timestamp;
 
     @Column(name = "index")
-    @Comment("Справочник")
     private String index;
 
     @Column(name = "is_valid")
-    @Comment("Результат проверки")
     private Boolean isValid;
 }

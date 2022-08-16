@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: XXX-create-table-check_metadata
+      author: Vasiliy Ivanchin
+      changes:
+        - createTable:
+            tableName: check_metadata
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: timestamp
+                  type: timestamp
+              - column:
+                  name: index
+                  type: varchar
+              - column:
+                  name: is_valid
+                  type: boolean
+        - setColumnRemarks:
+            columnName: timestamp
+            remarks: Дата проверки
+            schemaName: iplatform-moex
+            tableName: check_metadata
+        - setColumnRemarks:
+            columnName: index
+            remarks: Справочник
+            schemaName: iplatform-moex
+            tableName: check_metadata
+        - setColumnRemarks:
+            columnName: is_valid
+            remarks: Результат проверки
+            schemaName: iplatform-moex
+            tableName: check_metadata

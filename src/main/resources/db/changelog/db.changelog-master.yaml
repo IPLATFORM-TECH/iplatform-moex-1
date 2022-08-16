@@ -7,5 +7,5 @@ databaseChangeLog:
       file: db/changelog/changeset/005-create-table-security-type.yaml
       file: db/changelog/changeset/006-create-table-duration.yaml
   - include:
-        file: db/changelog/changeset/007-create-table-check_metadata.yaml
+        file: db/changelog/changeset/XXX-create-table-check_metadata.yaml
 
