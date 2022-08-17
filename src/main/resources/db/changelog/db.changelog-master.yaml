@@ -9,3 +9,4 @@ databaseChangeLog:
       file: db/changelog/changeset/007-create-table-security-group.yaml
       file: db/changelog/changeset/008-create-table-security-collection.yaml
       file: db/changelog/changeset/009-insert-engine-table.yaml
+      file: db/changelog/changeset/011-insert-engine-table.yaml
