@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 008-create-table-security-collection
+      author: roman
+      changes:
+        - createTable:
+            tableName: security_collection
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(96)
+              - column:
+                  name: title
+                  type: varchar(765)
+              - column:
+                  name: security_group_id
+                  type: integer
