@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: insert-engine
+      id: 009-insert-engine-table
       author: Konstantin Grigorkin
       changes:
         - insert:
