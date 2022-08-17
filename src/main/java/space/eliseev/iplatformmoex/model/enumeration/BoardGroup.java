@@ -1,4 +1,4 @@
-package space.eliseev.iplatformmoex.enums;
+package space.eliseev.iplatformmoex.model.enumeration;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
