@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: insert-duration
+      id: 011-insert-table-duration
       author: Vasiliy Ivanchin
       changes:
         - insert:
