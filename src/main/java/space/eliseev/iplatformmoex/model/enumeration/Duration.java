@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public enum Durations {
+public enum Duration {
     MINUTE("minute"),
     TEN_MINUTES("ten_minutes"),
     HOUR("hour"),
