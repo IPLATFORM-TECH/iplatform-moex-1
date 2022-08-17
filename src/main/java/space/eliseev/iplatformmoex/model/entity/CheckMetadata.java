@@ -4,10 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-<<<<<<< HEAD
-=======
-import org.hibernate.annotations.Comment;
->>>>>>> 4488fa0827d4b0851550fd1d81de4c1a27404216
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -21,10 +17,11 @@ import java.time.LocalDateTime;
 public class CheckMetadata {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(name = "timestamp")
+    @Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime timestamp;
 
     @Column(name = "index")
@@ -32,8 +29,4 @@ public class CheckMetadata {
 
     @Column(name = "is_valid")
     private Boolean isValid;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 4488fa0827d4b0851550fd1d81de4c1a27404216
