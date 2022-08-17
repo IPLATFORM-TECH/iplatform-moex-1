@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 public class EngineController {
 
-    private final EngineClient engineClient:
+    private final EngineClient engineClient;
 
     public EngineController(EngineClient engineClient) {
         this.engineClient = engineClient;
