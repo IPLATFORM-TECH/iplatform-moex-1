@@ -7,7 +7,7 @@ import space.eliseev.iplatformmoex.model.entity.Engine;
 
 import java.util.List;
 
-@FeignClient(name = "enginesClient", url = "https://iss.moex.com/iss/engines")
+@FeignClient(name = "enginesClient", url = "https://iss.moex.com/iss")
 public interface EngineClient {
 
     @GetMapping("/engines")
