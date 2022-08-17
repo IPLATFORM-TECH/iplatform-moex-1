@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -22,7 +23,7 @@ public class CheckMetadata {
 
     @Column(name = "timestamp")
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime timestamp;
+    private Date timestamp;
 
     @Column(name = "index")
     private String index;
