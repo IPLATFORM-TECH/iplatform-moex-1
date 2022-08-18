@@ -1,6 +1,5 @@
-package space.eliseev.iplatformmoex.entity;
+package space.eliseev.iplatformmoex.model.entity;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
