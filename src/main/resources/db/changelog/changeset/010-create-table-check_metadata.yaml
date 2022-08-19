@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 010-create-table-check_metadata
+      author: Vasiliy Ivanchin
+      changes:
+        - createTable:
+            tableName: check_metadata
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: timestamp
+                  remarks: Дата проверки
+                  type: timestamp
+              - column:
+                  name: index
+                  remarks: Справочник
+                  type: varchar
+              - column:
+                  name: is_valid
+                  remarks: Результат проверки
+                  type: boolean
