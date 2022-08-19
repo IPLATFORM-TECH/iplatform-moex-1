@@ -18,3 +18,4 @@ databaseChangeLog:
       file: db/changelog/changeset/009-insert-engine-table.yaml
       file: db/changelog/changeset/010-create-table-check_metadata.yaml
       file: db/changelog/changeset/011-insert-table-duration.yaml
+      file: db/changelog/changeset/014-insert-table-market.yaml

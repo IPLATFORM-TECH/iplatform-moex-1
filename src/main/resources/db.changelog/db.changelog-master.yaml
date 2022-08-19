@@ -1,3 +1,0 @@
-databaseChangeLog:
-  - include:
-      file: db/changelog/changeset/002-insert-table-market.yaml
