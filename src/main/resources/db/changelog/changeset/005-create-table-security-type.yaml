@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 005-create-table-security-type
+      author: roman
+      changes:
+        - createTable:
+            tableName: security_type
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: trade_engine_id
+                  type: integer
+              - column:
+                  name: trade_engine_name
+                  type: varchar(45)
+              - column:
+                  name: trade_engine_title
+                  type: varchar(765)
+              - column:
+                  name: security_type_name
+                  type: varchar(93)
+              - column:
+                  name: security_type_title
+                  type: varchar(765)
+              - column:
+                  name: security_group_name
+                  type: varchar(93)
