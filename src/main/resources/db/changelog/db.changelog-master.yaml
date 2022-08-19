@@ -21,3 +21,4 @@ databaseChangeLog:
       file: db/changelog/changeset/012-insert-table-board.yaml
       file: db/changelog/changeset/013-insert-table-board-group.yaml
       file: db/changelog/changeset/014-insert-table-market.yaml
+      file: db/changelog/changeset/015-insert-table-security-type.yaml
