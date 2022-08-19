@@ -19,3 +19,7 @@ databaseChangeLog:
       file: db/changelog/changeset/010-create-table-check_metadata.yaml
       file: db/changelog/changeset/011-insert-table-duration.yaml
       file: db/changelog/changeset/012-insert-table-board.yaml
+      file: db/changelog/changeset/013-insert-table-board-group.yaml
+
+
+
