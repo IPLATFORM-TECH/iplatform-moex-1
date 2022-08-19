@@ -1,3 +1,0 @@
-databaseChangeLog:
-  - include:
-      file: db/changelog/changeset/004-insert-table-board-group.yaml
