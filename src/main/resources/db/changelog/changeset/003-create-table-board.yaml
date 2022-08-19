@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-create-table-board
+      author: roman
+      changes:
+        - createTable:
+            tableName: board
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: board_group_id
+                  type: integer
+              - column:
+                  name: engine_id
+                  type: integer
+              - column:
+                  name: market_id
+                  type: integer
+              - column:
+                  name: boardid
+                  type: varchar(12)
+              - column:
+                  name: board_title
+                  type: varchar(381)
+              - column:
+                  name: is_traded
+                  type: integer
+              - column:
+                  name: has_candles
+                  type: integer
+              - column:
+                  name: is_primary
+                  type: integer
