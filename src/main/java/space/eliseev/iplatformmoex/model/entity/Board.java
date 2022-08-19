@@ -9,28 +9,21 @@ import java.util.Collection;
 @Getter
 @Setter
 @Entity
-@Table(name = "Board")
+@Table(name = "board")
 public class Board {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Integer id;
 
-//    @OneToMany
-//    @JoinColumn(name = "board_group_id")
     @Column(name = "board_group_id")
-    private Collection<BoardGroup> boardGroup;
+    private Integer boardGroupId;
 
-//    @OneToMany
-//    @JoinColumn(name = "engine_id")
     @Column(name = "engine_id")
-    private Collection<Engine> engine;
+    private Integer engineId;
 
-//    @OneToMany
-//    @JoinColumn(name = "market_id")
     @Column(name = "market_id")
-    private Collection<Market> market;
+    private Integer marketId;
 
     @Column(name = "boardid")
     private String boardId;
@@ -39,11 +32,11 @@ public class Board {
     private String boardTitle;
 
     @Column(name = "is_traded")
-    private int isTraded;
+    private Integer isTraded;
 
     @Column(name = "has_candles")
-    private int hasCandles;
+    private Integer hasCandles;
 
     @Column(name = "is_primary")
-    private int isPrimary;
+    private Integer isPrimary;
 }
