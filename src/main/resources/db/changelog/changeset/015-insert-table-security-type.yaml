@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 006-insert-table-security-type
+      id: 015-insert-table-security-type
       author: Mark
       changes:
         - insert:
