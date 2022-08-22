@@ -1,7 +1,8 @@
-package space.eliseev.iplatformmoex.model.entity;
+package space.eliseev.iplatformmoex.model.dto;
 
 import lombok.Getter;
 import lombok.Setter;
+import space.eliseev.iplatformmoex.model.entity.*;
 import space.eliseev.iplatformmoex.model.enumeration.Board;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 
@@ -10,7 +11,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class JsonEntity {
+public class IndexDto {
     private List<Engine> engines = new ArrayList<>();
     private List<Market> markets = new ArrayList<>();
     private List<Board> boards = new ArrayList<>();
