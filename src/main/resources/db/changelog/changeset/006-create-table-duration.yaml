@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 006-create-table-duration
+      author: roman
+      changes:
+        - createTable:
+            tableName: duration
+            columns:
+              - column:
+                  name: interval
+                  type: integer
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: duration
+                  type: integer
+              - column:
+                  name: days
+                  type: integer
+              - column:
+                  name: title
+                  type: varchar(765)
+              - column:
+                  name: hint
+                  type: varchar(765)

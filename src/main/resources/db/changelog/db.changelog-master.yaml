@@ -1,3 +1,26 @@
 databaseChangeLog:
   - include:
+      file: db/changelog/changeset/001-create-table-market.yaml
+  - include:
+      file: db/changelog/changeset/002-create-table-engine.yaml
+  - include:
+      file: db/changelog/changeset/003-create-table-board.yaml
+  - include:
+      file: db/changelog/changeset/004-create-table-board-group.yaml
+  - include:
+      file: db/changelog/changeset/005-create-table-security-type.yaml
+  - include:
+      file: db/changelog/changeset/006-create-table-duration.yaml
+  - include:
+      file: db/changelog/changeset/007-create-table-security-group.yaml
+  - include:
+      file: db/changelog/changeset/008-create-table-security-collection.yaml
+      file: db/changelog/changeset/009-insert-engine-table.yaml
+      file: db/changelog/changeset/010-create-table-check_metadata.yaml
+      file: db/changelog/changeset/011-insert-table-duration.yaml
+      file: db/changelog/changeset/012-insert-table-board.yaml
+      file: db/changelog/changeset/013-insert-table-board-group.yaml
+      file: db/changelog/changeset/014-insert-table-market.yaml
+      file: db/changelog/changeset/015-insert-table-security-type.yaml
       file: db/changelog/changeset/016_insert_security_collection.yaml
+    

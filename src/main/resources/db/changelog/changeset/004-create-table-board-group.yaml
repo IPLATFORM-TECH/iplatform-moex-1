@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-create-board-group
+      author: roman
+      changes:
+        - createTable:
+            tableName: board_group
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: trade_engine_id
+                  type: integer
+              - column:
+                  name: trade_engine_name
+                  type: varchar(45)
+              - column:
+                  name: trade_engine_title
+                  type: varchar(765)
+              - column:
+                  name: market_id
+                  type: integer
+              - column:
+                  name: market_name
+                  type: varchar(45)
+              - column:
+                  name: name
+                  type: varchar(192)
+              - column:
+                  name: title
+                  type: varchar(765)
+              - column:
+                  name: is_default
+                  type: integer
+              - column:
+                  name: board_group_id
+                  type: integer
+              - column:
+                  name: is_traded
+                  type: integer
+              - column:
+                  name: is_order_driven
+                  type: integer
+              - column:
+                  name: category
+                  type: varchar(45)
