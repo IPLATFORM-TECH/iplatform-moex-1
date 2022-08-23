@@ -16,7 +16,7 @@ public class SecurityController {
 
     private final SecurityService securityService;
 
-    @GetMapping("/getSecurities")
+    @GetMapping("/getSecurity")
     public ResponseEntity<Object> convertCurrencyFeign(
             @RequestParam(value = "q", required = false) String q,
             @RequestParam(value = "lang", required = false) String lang,
