@@ -25,7 +25,7 @@ public class SecurityController {
             @RequestParam(value = "market", required = false) Market market,
             @RequestParam(value = "group_by", required = false) String groupBy,
             @RequestParam(value = "limit", required = false) Integer limit,
-            @RequestParam(value = "group_by_filter", required = false) Integer groupByFilter,
+            @RequestParam(value = "group_by_filter", required = false) String groupByFilter,
             @RequestParam(value = "start", required = false) Integer start) {
 
         return new ResponseEntity<>(securityService.getSecurity(q, lang,

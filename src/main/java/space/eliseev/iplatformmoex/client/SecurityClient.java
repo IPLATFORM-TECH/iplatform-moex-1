@@ -17,6 +17,6 @@ public interface SecurityClient {
                        @PathVariable("market") Market market,
                        @PathVariable("group_by") String groupBy,
                        @PathVariable("limit") Integer limit,
-                       @PathVariable("group_by_filter") Integer groupByFilter,
+                       @PathVariable("group_by_filter") String groupByFilter,
                        @PathVariable("start") Integer start);
 }

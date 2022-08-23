@@ -14,7 +14,7 @@ public class SecurityServiceImpl implements SecurityService {
 
     @Override
     public Object getSecurity(String q, String lang, Engine engine, Integer isTrading, Market market,
-                              String groupBy, Integer limit, Integer groupByFilter, Integer start) {
+                              String groupBy, Integer limit, String groupByFilter, Integer start) {
         return securityClient.getSecurity(q, lang, engine, isTrading,
                 market, groupBy, limit, groupByFilter, start);
     }
