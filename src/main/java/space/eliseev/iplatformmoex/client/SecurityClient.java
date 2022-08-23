@@ -1,4 +1,4 @@
-package space.eliseev.iplatformmoex.service;
+package space.eliseev.iplatformmoex.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

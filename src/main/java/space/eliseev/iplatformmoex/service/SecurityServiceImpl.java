@@ -2,6 +2,7 @@ package space.eliseev.iplatformmoex.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import space.eliseev.iplatformmoex.client.SecurityClient;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 
