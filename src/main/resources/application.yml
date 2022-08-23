@@ -11,3 +11,6 @@ spring:
       ddl-auto: validate
   liquibase:
     enabled: true
+client:
+  post:
+    baseUrl: https://iss.moex.com/iss/securities.json
