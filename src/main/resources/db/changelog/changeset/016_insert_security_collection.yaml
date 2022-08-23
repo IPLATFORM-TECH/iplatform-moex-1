@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 015_insert_security_collection
+      id: 016_insert_security_collection
       author: Vasilisa
       changes:
         - insert:
