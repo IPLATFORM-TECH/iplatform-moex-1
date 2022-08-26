@@ -3,7 +3,7 @@ databaseChangeLog:
       id: 007-create-table-security-group
       author: roman
       changes:
-        - createTable:
+        - update:
             tableName: security_group
             columns:
               - column:
