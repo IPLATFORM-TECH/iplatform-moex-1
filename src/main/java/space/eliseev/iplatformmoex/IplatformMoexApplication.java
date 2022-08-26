@@ -6,6 +6,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableFeignClients
 @SpringBootApplication
+@EnableFeignClients
 public class IplatformMoexApplication {
 
     public static void main(String[] args) {
