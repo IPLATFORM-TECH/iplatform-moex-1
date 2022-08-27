@@ -25,6 +25,6 @@ public class SecurityController {
                                                     @RequestParam(value = "lang", required = false) String lang,
                                                     @RequestParam(value = "start", required = false) Integer start) {
 
-        return ResponseEntity.ok().body(securityClient.getSecurities(security, lang, start));
+        return ResponseEntity.ok().body(securityClient.getSecurity(security, lang, start));
     }
 }

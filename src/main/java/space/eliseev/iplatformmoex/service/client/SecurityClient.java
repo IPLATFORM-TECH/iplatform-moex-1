@@ -10,7 +10,7 @@ import java.util.List;
 public interface SecurityClient {
 
     @GetMapping("/security")
-    List<Object> getSecurities(@RequestParam("security") String security,
+    List<Object> getSecurity(@RequestParam("security") String security,
                               @RequestParam(value = "lang", required = false) String lang,
                               @RequestParam(value = "start", required = false) Integer start);
 }
