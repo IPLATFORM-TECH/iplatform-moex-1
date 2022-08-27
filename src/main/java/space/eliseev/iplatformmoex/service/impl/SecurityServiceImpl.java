@@ -1,10 +1,11 @@
-package space.eliseev.iplatformmoex.service;
+package space.eliseev.iplatformmoex.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import space.eliseev.iplatformmoex.client.SecurityClient;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
+import space.eliseev.iplatformmoex.service.SecurityService;
 
 @Service
 @RequiredArgsConstructor
