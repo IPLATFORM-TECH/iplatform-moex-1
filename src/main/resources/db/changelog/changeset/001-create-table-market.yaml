@@ -13,6 +13,9 @@ databaseChangeLog:
                   constraints:
                     primaryKey: true
               - column:
+                  name: trade_engine_id
+                  type: integer
+              - column:
                   name: trade_engine_name
                   type: varchar(45)
               - column:
@@ -32,4 +35,16 @@ databaseChangeLog:
                   type: varchar(48)
               - column:
                   name: is_otc
+                  type: integer
+              - column:
+                  name: has_history_files
+                  type: integer
+              - column:
+                  name: has_history_trades_files
+                  type: integer
+              - column:
+                  name: has_trades
+                  type: integer
+              - column:
+                  name: has_history
                   type: integer
