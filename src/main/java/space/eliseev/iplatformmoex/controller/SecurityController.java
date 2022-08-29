@@ -15,8 +15,8 @@ import space.eliseev.iplatformmoex.service.SecurityService;
 public class SecurityController {
     private final SecurityService securityService;
 
-    @GetMapping("/getSecurity")
-    public ResponseEntity<Object> convertCurrencyFeign(
+    @GetMapping("/getSecurities")
+    public ResponseEntity<Object> getSecurities(
             @RequestParam(value = "q", required = false) String q,
             @RequestParam(value = "lang", defaultValue = "ru", required = false) String lang,
             @RequestParam(value = "engine", required = false) Engine engine,
@@ -31,7 +31,7 @@ public class SecurityController {
                 engine, isTrading, market, groupBy, limit, groupByFilter, start), HttpStatus.OK);
     }
 
-    @GetMapping("/securityStats")
+    @GetMapping("/getSecStats")
     public ResponseEntity<Object> getSecStats(@RequestParam("tradingsession") String tradingSession,
                                                      @RequestParam("securities") String securities,
                                                      @RequestParam("boardid") String boardId,
