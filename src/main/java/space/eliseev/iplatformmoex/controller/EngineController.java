@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import space.eliseev.iplatformmoex.model.entity.Engine;
-import space.eliseev.iplatformmoex.service.client.EngineClient;
+import space.eliseev.iplatformmoex.client.EngineClient;
 
 import java.util.List;
 

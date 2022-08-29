@@ -12,8 +12,6 @@ public class SwaggerConfig {
         return new OpenAPI()
                 .info(
                         new Info()
-                                .title("API Московской биржи")
-                );
+                                .title("API Московской биржи"));
     }
 }
-
