@@ -32,9 +32,9 @@ public class SecurityController {
     }
 
     @GetMapping("/getSecStats")
-    public ResponseEntity<Object> getSecStats(@RequestParam("tradingsession") String tradingSession,
-                                                     @RequestParam("securities") String securities,
-                                                     @RequestParam("boardid") String boardId,
+    public ResponseEntity<Object> getSecStats(@RequestParam(name = "tradingsession", required = false) String tradingSession,
+                                                     @RequestParam(name = "securities", required = false) String securities,
+                                                     @RequestParam(name = "boardid", required = false) String boardId,
                                                      Engine engine,
                                                      Market market) {
         return new ResponseEntity<>(securityService.getSecStats(tradingSession, securities, boardId, engine, market), HttpStatus.OK);
