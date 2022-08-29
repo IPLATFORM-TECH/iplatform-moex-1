@@ -13,4 +13,4 @@ spring:
     enabled: true
 client:
   post:
-    baseUrl: https://iss.moex.com/iss.json
+    baseUrl: https://iss.moex.com/iss
