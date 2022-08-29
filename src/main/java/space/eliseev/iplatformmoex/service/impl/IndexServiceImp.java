@@ -1,18 +1,21 @@
-package space.eliseev.iplatformmoex.service;
+package space.eliseev.iplatformmoex.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.stereotype.Service;
 import space.eliseev.iplatformmoex.model.dto.IndexDto;
 import space.eliseev.iplatformmoex.model.entity.*;
 import space.eliseev.iplatformmoex.model.enumeration.Board;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
+import space.eliseev.iplatformmoex.service.IndexService;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.logging.Logger;
 
+@Service
 public class IndexServiceImp implements IndexService {
-    private final String INDEX_URL = "https://iss.moex.com/iss/index.json";
+    private static final String INDEX_URL = "https://iss.moex.com/iss/index.json";
 
     private IndexDto index;
     private Logger logger;
