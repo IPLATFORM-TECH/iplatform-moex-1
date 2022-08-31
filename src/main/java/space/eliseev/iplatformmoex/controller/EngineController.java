@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import space.eliseev.iplatformmoex.service.EngineService;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/engine")
@@ -19,6 +19,6 @@ public class EngineController {
     }
     @GetMapping("/getEngines")
     public ResponseEntity<Object> getEngines(@RequestParam(defaultValue = "en") String lang) {
-        return ResponseEntity.ok().body(engineService.getEngines(lang));
+        return ResponseEntity.ok().body(engineService.getEngine(lang));
     }
 }

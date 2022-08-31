@@ -11,5 +11,5 @@ import java.util.List;
 public interface EngineClient {
 
     @GetMapping("/engines")
-    List<Engine> getEngines(@RequestParam("lang") String lang);
+    Object getEngines(@RequestParam("lang") String lang);
 }
