@@ -5,23 +5,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import space.eliseev.iplatformmoex.model.entity.Engine;
-import space.eliseev.iplatformmoex.client.EngineClient;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/engines")
+@RequestMapping("/engine")
 public class EngineController {
 
-    private final EngineClient engineClient;
+    private final EngineService engineService;
 
-    public EngineController(EngineClient engineClient) {
-        this.engineClient = engineClient;
+    public EngineController(EngineService engineService) {
+        this.engineService = engineService;
     }
-
     @GetMapping("/getEngines")
-    public ResponseEntity<List<Engine>> getEngines(@RequestParam(defaultValue = "en") String lang) {
-        return ResponseEntity.ok().body(engineClient.getEngines(lang));
+    public ResponseEntity<Object> getEngines(@RequestParam(defaultValue = "en") String lang) {
+        return ResponseEntity.ok().body(engineService.getEngines(lang));
     }
 }
