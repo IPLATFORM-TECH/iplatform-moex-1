@@ -13,7 +13,7 @@ import space.eliseev.iplatformmoex.service.SecurityService;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(value ="/security", produces = "application/json; charset=UTF-8")
+@RequestMapping(value = "/security", produces = "application/json; charset=UTF-8")
 
 public class SecurityController {
     private final SecurityService securityService;
@@ -31,15 +31,15 @@ public class SecurityController {
             @RequestParam(value = "start", defaultValue = "0", required = false) Integer start) {
 
         return new ResponseEntity<>(securityService.getSecurities(q, lang,
-                engine.getName(), isTrading, market.getName(), groupBy, limit, groupByFilter, start), HttpStatus.OK);
+                engine, isTrading, market, groupBy, limit, groupByFilter, start), HttpStatus.OK);
     }
 
     @GetMapping("/getSecStats")
     public ResponseEntity<Object> getSecStats(@RequestParam(name = "tradingsession", required = false) String tradingSession,
-                                                     @RequestParam(name = "securities", required = false) String securities,
-                                                     @RequestParam(name = "boardid", required = false) String boardId,
-                                                     Engine engine,
-                                                     Market market) {
-        return new ResponseEntity<>(securityService.getSecStats(tradingSession, securities, boardId, engine.getName(), market.getName()), HttpStatus.OK);
+                                              @RequestParam(name = "securities", required = false) String securities,
+                                              @RequestParam(name = "boardid", required = false) String boardId,
+                                              @RequestParam(name = "engine") Engine engine,
+                                              @RequestParam(name = "market") Market market) {
+        return new ResponseEntity<>(securityService.getSecStats(tradingSession, securities, boardId, engine, market), HttpStatus.OK);
     }
 }

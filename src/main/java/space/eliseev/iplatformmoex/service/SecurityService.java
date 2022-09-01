@@ -1,13 +1,18 @@
 package space.eliseev.iplatformmoex.service;
 
+
+import lombok.NonNull;
+import space.eliseev.iplatformmoex.model.enumeration.Engine;
+import space.eliseev.iplatformmoex.model.enumeration.Market;
+
 public interface SecurityService {
-    Object getSecurities(String q, String lang, String engine, Integer isTrading, String market,
-                       String groupBy, String limit, String groupByFilter, Integer start);
+    Object getSecurities(String q, String lang, Engine engine, Integer isTrading, Market market,
+                         String groupBy, String limit, String groupByFilter, Integer start);
 
 
     Object getSecStats(String tradingSession,
                        String securities,
                        String boardId,
-                       String engine,
-                       String market);
+                       @NonNull Engine engine,
+                       @NonNull Market market);
 }
