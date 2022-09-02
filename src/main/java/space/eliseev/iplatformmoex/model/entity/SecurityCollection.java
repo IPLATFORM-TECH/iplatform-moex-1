@@ -24,8 +24,7 @@ public class SecurityCollection {
     @Column(name = "title", length = 765)
     private String title;
 
-    @ManyToOne
-    @JoinColumn(name = "security_group_id")
-    private SecurityGroup securityGroup;
+    @Column(name = "security_group_id")
+    private Integer securityGroup;
 
 }
