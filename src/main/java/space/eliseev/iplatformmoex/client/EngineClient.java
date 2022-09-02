@@ -1,4 +1,4 @@
-package space.eliseev.iplatformmoex.service.client;
+package space.eliseev.iplatformmoex.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,5 +11,5 @@ import java.util.List;
 public interface EngineClient {
 
     @GetMapping("/engines")
-    List<Engine> getEngines(@RequestParam("lang") String lang);
+    Object getEngines(@RequestParam("lang") String lang);
 }
