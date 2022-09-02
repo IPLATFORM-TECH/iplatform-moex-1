@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 
-@FeignClient(name="securities", url="${client.post.baseUrl}")
+@FeignClient(name = "securities", url = "${client.post.baseUrl}")
 public interface SecurityClient {
     @GetMapping("?q={q}&lang={lang}&engine={engine}&is_trading={is_trading}&market={market}" +
             "&group_by={group_by}&limit={limit}&group_by_filter={group_by_filter}&start={start}")
@@ -19,4 +19,9 @@ public interface SecurityClient {
                        @PathVariable("limit") Integer limit,
                        @PathVariable("group_by_filter") String groupByFilter,
                        @PathVariable("start") Integer start);
+
+    @GetMapping(value = "/{security}/aggregates.json?lang={lang}&date={date}")
+    Object getSecurityAggregates(@PathVariable("security") String security,
+                                 @PathVariable("lang") String lang,
+                                 @PathVariable("date") String date);
 }

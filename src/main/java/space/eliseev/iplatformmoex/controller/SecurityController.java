@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import space.eliseev.iplatformmoex.model.dto.AggregatesDto;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 import space.eliseev.iplatformmoex.service.SecurityService;
@@ -33,8 +32,8 @@ public class SecurityController {
                 engine, isTrading, market, groupBy, limit, groupByFilter, start), HttpStatus.OK);
     }
 
-    @GetMapping("/security/aggregates")
-    public ResponseEntity<AggregatesDto> getSecurityAggregates(
+    @GetMapping(value = "/security/aggregates", produces = "application/json; charset=UTF-8")
+    public ResponseEntity<Object> getSecurityAggregates(
             @RequestParam(value = "security") String security,
             @RequestParam(defaultValue = "ru") String lang,
             @RequestParam(defaultValue = "last") String date) {
