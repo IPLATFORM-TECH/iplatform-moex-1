@@ -3,14 +3,17 @@ package space.eliseev.iplatformmoex.client;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 
+import java.util.List;
+
 @FeignClient(name="securities", url="${client.post.baseUrl}")
 public interface SecurityClient {
-    @GetMapping("?q={q}&lang={lang}&engine={engine}&is_trading={is_trading}&market={market}" +
+    @GetMapping(".json?q={q}&lang={lang}&engine={engine}&is_trading={is_trading}&market={market}" +
             "&group_by={group_by}&limit={limit}&group_by_filter={group_by_filter}&start={start}")
-    Object getSecurity(@PathVariable("q") String q,
+    Object getSecurities(@PathVariable("q") String q,
                        @PathVariable("lang") String lang,
                        @PathVariable("engine") Engine engine,
                        @PathVariable("is_trading") Integer isTrading,
@@ -19,4 +22,9 @@ public interface SecurityClient {
                        @PathVariable("limit") Integer limit,
                        @PathVariable("group_by_filter") String groupByFilter,
                        @PathVariable("start") Integer start);
+
+    @GetMapping("/security")
+    List<Object> getSecurity(@RequestParam("security") String security,
+                             @RequestParam(value = "lang", required = false) String lang,
+                             @RequestParam(value = "start", required = false) Integer start);
 }

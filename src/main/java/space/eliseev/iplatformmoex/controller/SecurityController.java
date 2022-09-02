@@ -32,7 +32,7 @@ public class SecurityController {
             @RequestParam(value = "group_by_filter", required = false) String groupByFilter,
             @RequestParam(value = "start", required = false) Integer start) {
 
-        return new ResponseEntity<>(securityService.getSecurity(q, lang,
+        return new ResponseEntity<>(securityService.getSecurities(q, lang,
                 engine, isTrading, market, groupBy, limit, groupByFilter, start), HttpStatus.OK);
     }
     @GetMapping("/getSecurity")
@@ -40,6 +40,6 @@ public class SecurityController {
                                                     @RequestParam(value = "lang", required = false) String lang,
                                                     @RequestParam(value = "start", required = false) Integer start) {
 
-        return ResponseEntity.ok().body(securityClient.getSecurity(security, lang, start));
+        return ResponseEntity.ok().body(securityService.getSecurity(security, lang, start));
     }
 }
