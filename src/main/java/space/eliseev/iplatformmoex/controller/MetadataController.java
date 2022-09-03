@@ -52,7 +52,7 @@ public class MetadataController {
                     responseCode = "200",
                     content = @Content(
                             mediaType = "application/json",
-                            array = @ArraySchema(schema = @Schema(implementation = BoardGroup.class))),
+                            array = @ArraySchema(schema = @Schema(implementation = Board.class))),
                     description = "Successful operation")
     })
     @GetMapping(value = "/getBoard")
