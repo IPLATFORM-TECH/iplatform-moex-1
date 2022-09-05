@@ -31,8 +31,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -61,8 +73,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "INDICES"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -91,8 +115,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "MXSE"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -121,8 +157,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "MXSE"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -151,8 +199,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -181,8 +241,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -211,8 +283,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "MXSE"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -241,8 +325,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -271,8 +367,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -301,8 +409,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -331,8 +451,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -361,8 +493,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "MXSE"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -391,8 +535,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -421,8 +577,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -451,8 +619,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "MXSE"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -481,7 +661,19 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
                   value: 0
         - insert:
             tableName: market
@@ -511,8 +703,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "MXCX"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -541,8 +745,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "MXCX"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -571,8 +787,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "FIXING"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -601,8 +829,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "MXCX"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -631,8 +871,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -661,8 +913,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "FORTS"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -691,8 +955,20 @@ databaseChangeLog:
                   name: marketplace
                   value: "OPTIONS"
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -721,7 +997,19 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
                   value: 0
         - insert:
             tableName: market
@@ -751,7 +1039,19 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
                   value: 0
         - insert:
             tableName: market
@@ -781,8 +1081,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -811,8 +1123,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -841,8 +1165,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -871,8 +1207,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -901,7 +1249,19 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
+                  value: 1
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
                   value: 1
         - insert:
             tableName: market
@@ -931,7 +1291,19 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
+                  value: 1
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
                   value: 1
         - insert:
             tableName: market
@@ -961,7 +1333,19 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
+                  value: 1
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
                   value: 1
         - insert:
             tableName: market
@@ -991,8 +1375,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -1021,8 +1417,20 @@ databaseChangeLog:
                   name: marketplace
                   value: null
               - column:
-                  name: is_otc 
+                  name: is_otc
                   value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
         - insert:
             tableName: market
             columns:
@@ -1036,4 +1444,242 @@ databaseChangeLog:
                   name: trade_engine_name
                   value: "stock"
               - column:
-                
+                  name: trade_engine_title
+                  value: "Фондовый рынок и рынок депозитов"
+              - column:
+                  name: market_name
+                  value: "nonresccp"
+              - column:
+                  name: market_title
+                  value: "Рынок РЕПО с ЦК (нерезиденты)"
+              - column:
+                  name: market_id
+                  value: 1019
+              - column:
+                  name: marketplace
+                  value: null
+              - column:
+                  name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
+        - insert:
+            tableName: market
+            columns:
+              - column:
+                  name: id
+                  value: 18
+              - column:
+                  name: trade_engine_id
+                  value: 5
+              - column:
+                  name: trade_engine_name
+                  value: "commodity"
+              - column:
+                  name: trade_engine_title
+                  value: "Товарный рынок"
+              - column:
+                  name: market_name
+                  value: "futures"
+              - column:
+                  name: market_title
+                  value: "Секция стандартных контрактов АО НТБ"
+              - column:
+                  name: market_id
+                  value: 18
+              - column:
+                  name: marketplace
+                  value: null
+              - column:
+                  name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
+        - insert:
+            tableName: market
+            columns:
+              - column:
+                  name: id
+                  value: 20
+              - column:
+                  name: trade_engine_id
+                  value: 6
+              - column:
+                  name: trade_engine_name
+                  value: "interventions"
+              - column:
+                  name: trade_engine_title
+                  value: "Товарные интервенции"
+              - column:
+                  name: market_name
+                  value: "grain"
+              - column:
+                  name: market_title
+                  value: "Интервенции по зерну"
+              - column:
+                  name: market_id
+                  value: 20
+              - column:
+                  name: marketplace
+                  value: null
+              - column:
+                  name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
+                  value: 0
+        - insert:
+            tableName: market
+            columns:
+              - column:
+                  name: id
+                  value: 1084
+              - column:
+                  name: trade_engine_id
+                  value: 9
+              - column:
+                  name: trade_engine_name
+                  value: "agro"
+              - column:
+                  name: trade_engine_title
+                  value: "Агро"
+              - column:
+                  name: market_name
+                  value: "buyauctions"
+              - column:
+                  name: market_title
+                  value: "Закупочные аукционы НТБ"
+              - column:
+                  name: market_id
+                  value: 1084
+              - column:
+                  name: marketplace
+                  value: null
+              - column:
+                  name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
+                  value: 0
+        - insert:
+            tableName: market
+            columns:
+              - column:
+                  name: id
+                  value: 23
+              - column:
+                  name: trade_engine_id
+                  value: 1
+              - column:
+                  name: trade_engine_name
+                  value: "stock"
+              - column:
+                  name: trade_engine_title
+                  value: "Фондовый рынок и рынок депозитов"
+              - column:
+                  name: market_name
+                  value: "standard"
+              - column:
+                  name: market_title
+                  value: "Standard"
+              - column:
+                  name: market_id
+                  value: 23
+              - column:
+                  name: marketplace
+                  value: null
+              - column:
+                  name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
+        - insert:
+            tableName: market
+            columns:
+              - column:
+                  name: id
+                  value: 25
+              - column:
+                  name: trade_engine_id
+                  value: 1
+              - column:
+                  name: trade_engine_name
+                  value: "stock"
+              - column:
+                  name: trade_engine_title
+                  value: "Фондовый рынок и рынок депозитов"
+              - column:
+                  name: market_name
+                  value: "classica"
+              - column:
+                  name: market_title
+                  value: "Classica"
+              - column:
+                  name: market_id
+                  value: 25
+              - column:
+                  name: marketplace
+                  value: null
+              - column:
+                  name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 1
+              - column:
+                  name: has_history_trades_files
+                  value: 1
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
