@@ -1,6 +1,8 @@
 package space.eliseev.iplatformmoex.model.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,6 +11,8 @@ import javax.persistence.*;
 @Table(name = "security_type")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class SecurityType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
