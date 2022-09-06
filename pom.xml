@@ -94,9 +94,9 @@
         <profile>
             <id>dev</id>
             <properties>
-                <db-url>jdbc:postgresql://localhost:5432/postgres</db-url>
+                <db-url>jdbc:postgresql://localhost:5432/iplatform_moex</db-url>
                 <db-username>postgres</db-username>
-                <db-password>root</db-password>
+                <db-password>postgres</db-password>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>

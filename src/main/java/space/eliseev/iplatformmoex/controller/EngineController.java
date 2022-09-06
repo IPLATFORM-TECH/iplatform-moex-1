@@ -28,14 +28,15 @@ public class EngineController {
     }
 
     @Operation(
-            summary = "Gets all Engines",
+            summary = "Get all Engines",
             description = "Получить список всех доступных торговых систем",
             tags = "Engine API"
     )
+    @Parameter(description = "Язык описания", required = false, name = "lang")
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200",
-                    content = @Content(mediaType = "application.json"),
+                    content = @Content(mediaType = "application/json"),
                     description = "Successful operation")
     })
     @GetMapping("/getEngines")
@@ -44,7 +45,7 @@ public class EngineController {
     }
 
     @Operation(
-            summary = "Gets Engine",
+            summary = "Get Engine",
             description = "Получить информацию по выбранной торговой системе",
             tags = "Engine API"
     )
@@ -55,7 +56,7 @@ public class EngineController {
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200",
-                    content = @Content(mediaType = "application.json"),
+                    content = @Content(mediaType = "application/json"),
                     description = "Successful operation")
     })
     @GetMapping("/getEngines/{engine}")
