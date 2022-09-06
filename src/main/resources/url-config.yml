@@ -1,0 +1,9 @@
+feign:
+  engine:
+    name: engine
+    description:
+    url: https://iss.moex.com/iss/engines
+  securities:
+    name: securities
+    description:
+    url: https://iss.moex/iss/securities
