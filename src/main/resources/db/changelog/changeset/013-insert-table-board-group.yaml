@@ -8072,6 +8072,48 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
+                  value: 1032
+              - column:
+                  name: trade_engine_id
+                  value: 9
+              - column:
+                  name: trade_engine_name
+                  value: "agro"
+              - column:
+                  name: trade_engine_title
+                  value: "Агро"
+              - column:
+                  name: market_id
+                  value: 1031
+              - column:
+                  name: market_name
+                  value: "auctions"
+              - column:
+                  name: name
+                  value: "agro_auctions_all"
+              - column:
+                  name: title
+                  value: "Агро: Аукционы НТБ"
+              - column:
+                  name: is_default
+                  value: 1
+              - column:
+                  name: board_group_id
+                  value: 1032
+              - column:
+                  name: is_traded
+                  value: 1
+              - column:
+                  name: is_order_driven
+                  value: null
+              - column:
+                  name: category
+                  value: "main"
+        - insert:
+            tableName: board_group
+            columns:
+              - column:
+                  name: id
                   value: 1085
               - column:
                   name: trade_engine_id
@@ -8096,7 +8138,7 @@ databaseChangeLog:
                   value: "Агро: Закупочные аукционы НТБ"
               - column:
                   name: is_default
-                  value: 0
+                  value: 1
               - column:
                   name: board_group_id
                   value: 1085
