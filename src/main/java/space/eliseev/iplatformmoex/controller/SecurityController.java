@@ -11,7 +11,6 @@ import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 import space.eliseev.iplatformmoex.service.SecurityService;
 
-import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -35,7 +34,7 @@ public class SecurityController {
         return new ResponseEntity<>(securityService.getSecurities(q, lang,
                 engine, isTrading, market, groupBy, limit, groupByFilter, start), HttpStatus.OK);
     }
-    
+
     @GetMapping("/getSecStats")
     public ResponseEntity<Object> getSecStats(@RequestParam(name = "tradingsession", required = false) String tradingSession,
                                               @RequestParam(name = "securities", required = false) String securities,
@@ -45,10 +44,20 @@ public class SecurityController {
         return new ResponseEntity<>(securityService.getSecStats(tradingSession, securities, boardId, engine, market), HttpStatus.OK);
 
     @GetMapping("/getSecurity")
-    public ResponseEntity<List<Object>> getSecurity(@RequestParam("security") String security,
+    public ResponseEntity<Object> getSecurity(@RequestParam("security") String security,
                                                     @RequestParam(value = "lang", required = false) String lang,
                                                     @RequestParam(value = "start", required = false) Integer start) {
 
         return ResponseEntity.ok().body(securityService.getSecurity(security, lang, start));
     }
+
+    @GetMapping(value = "/security/aggregates", produces = "application/json; charset=UTF-8")
+    public ResponseEntity<Object> getSecurityAggregates(
+            @RequestParam(value = "security") String security,
+            @RequestParam(defaultValue = "ru") String lang,
+            @RequestParam(defaultValue = "last") String date) {
+
+        return new ResponseEntity<>(securityService.getSecurityAggregates(security, lang, date), HttpStatus.OK);
+    }
+
 }

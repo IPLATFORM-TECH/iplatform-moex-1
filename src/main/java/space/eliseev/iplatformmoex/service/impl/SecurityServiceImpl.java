@@ -37,9 +37,15 @@ public class SecurityServiceImpl implements SecurityService {
 
         return securityClient.getSecStats(tradingSession, securities, boardId, engine.getName(), market.getName());
     }
+  
+    @Override
+    public Object getSecurity(String security, String lang, Integer start) {
+        return securityClient.getSecurity(security, lang, start);
+    }
 
     @Override
-    public List<Object> getSecurity(String security, String lang, Integer start) {
-        return securityClient.getSecurity(security, lang, start);
+    public Object getSecurityAggregates(String security, String lang, String date) {
+        return securityClient.getSecurityAggregates(security, lang, date);
+
     }
 }

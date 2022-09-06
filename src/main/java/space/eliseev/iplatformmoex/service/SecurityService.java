@@ -3,7 +3,6 @@ package space.eliseev.iplatformmoex.service;
 import lombok.NonNull;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
-import java.util.List;
 
 public interface SecurityService {
 
@@ -23,7 +22,12 @@ public interface SecurityService {
                        @NonNull Engine engine,
                        @NonNull Market market);
 
-    List<Object> getSecurity(String security,
-                             String lang,
-                             Integer start);
+    Object getSecurity(String security,
+                       String lang,
+                       Integer start);
+
+    Object getSecurityAggregates(String security,
+                                 String lang,
+                                 String date);
+
 }

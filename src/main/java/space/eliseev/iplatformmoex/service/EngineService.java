@@ -2,5 +2,6 @@ package space.eliseev.iplatformmoex.service;
 
 public interface EngineService {
 
-    Object getEngine(String lang);
+    Object getEngines(String lang);
+    Object getEngine(String engine, String lang, String timetable, String meta);
 }

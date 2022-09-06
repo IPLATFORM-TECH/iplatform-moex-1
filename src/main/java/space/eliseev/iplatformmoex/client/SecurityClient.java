@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
-@FeignClient(name="securities", url="${client.post.baseUrl}")
+
+@FeignClient(name = "securities", url = "${client.post.baseUrl}")
 public interface SecurityClient {
 
     @GetMapping("/securities.json")
@@ -27,8 +28,13 @@ public interface SecurityClient {
                               @PathVariable("engine") String engine,
                               @PathVariable("market") String market);
 
-    @GetMapping("/security")
-    List<Object> getSecurity(@RequestParam("security") String security,
+    @GetMapping("/security.json")
+    Object getSecurity(@RequestParam("security") String security,
                              @RequestParam(value = "lang", required = false) String lang,
                              @RequestParam(value = "start", required = false) Integer start);
+
+    @GetMapping(value = "/{security}/aggregates.json?lang={lang}&date={date}")
+    Object getSecurityAggregates(@PathVariable("security") String security,
+                                 @PathVariable("lang") String lang,
+                                 @PathVariable("date") String date);
 }
