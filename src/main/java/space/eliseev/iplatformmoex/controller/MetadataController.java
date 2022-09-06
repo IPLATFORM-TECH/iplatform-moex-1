@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(value ="/metadata", produces = "application/json; charset=UTF-8")
-public class MetadataController {
+public class  MetadataController {
 
     private final MetadataService metadataService;
 
