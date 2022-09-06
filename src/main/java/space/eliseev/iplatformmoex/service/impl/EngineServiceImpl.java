@@ -12,7 +12,12 @@ public class EngineServiceImpl implements EngineService {
     private final EngineClient engineClient;
 
     @Override
-    public Object getEngine(String lang) {
+    public Object getEngines(String lang) {
         return engineClient.getEngines(lang);
+    }
+
+    @Override
+    public Object getEngine(String engine, String lang, String timetable, String meta) {
+        return engineClient.getEngine(engine, lang, timetable, meta);
     }
 }
