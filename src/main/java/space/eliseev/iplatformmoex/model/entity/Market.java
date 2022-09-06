@@ -15,13 +15,14 @@ public class Market {
     @Column(name = "id")
     private Integer id;
 
-    @ManyToOne
-    @JoinColumns({
-            @JoinColumn(name = "trade_engine_id", referencedColumnName = "id"),
-            @JoinColumn(name = "trade_engine_name", referencedColumnName = "name"),
-            @JoinColumn(name = "trade_engine_title", referencedColumnName = "title")
-    })
-    private Engine engine;
+    @Column(name = "trade_engine_id")
+    private Integer tradeEngineId;
+
+    @Column(name = "trade_engine_name")
+    private String tradeEngineName;
+
+    @Column(name = "trade_engine_title")
+    private String tradeEngineTitle;
 
     @Column(name = "market_name")
     private String marketName;
