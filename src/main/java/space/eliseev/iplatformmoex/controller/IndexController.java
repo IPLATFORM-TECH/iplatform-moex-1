@@ -30,7 +30,7 @@ public class IndexController {
     @Operation(
             summary = "Gets all Engines",
             description = "Получить список всех Engines",
-            tags = {"Metadata API"})
+            tags = {"Index API"})
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200",
@@ -48,7 +48,7 @@ public class IndexController {
     @Operation(
             summary = "Gets all Markets",
             description = "Получить список всех Markets",
-            tags = {"Metadata API"})
+            tags = {"Index API"})
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200",
@@ -66,7 +66,7 @@ public class IndexController {
     @Operation(
             summary = "Gets all Board",
             description = "Получить список всех Board",
-            tags = {"Metadata API"})
+            tags = {"Index API"})
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200",
@@ -84,7 +84,7 @@ public class IndexController {
     @Operation(
             summary = "Gets all BoardGroup",
             description = "Получить список всех BoardGroup",
-            tags = {"Metadata API"})
+            tags = {"Index API"})
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200",
@@ -102,7 +102,7 @@ public class IndexController {
     @Operation(
             summary = "Gets all Durations(",
             description = "Получить список всех Durations(",
-            tags = {"Metadata API"})
+            tags = {"Index API"})
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200",
@@ -120,7 +120,7 @@ public class IndexController {
     @Operation(
             summary = "Gets all SecurityGroups",
             description = "Получить список всех SecurityGroups",
-            tags = {"Metadata API"})
+            tags = {"Index API"})
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200",
@@ -138,7 +138,7 @@ public class IndexController {
     @Operation(
             summary = "Gets all SecurityCollections",
             description = "Получить список всех SecurityCollections",
-            tags = {"Metadata API"})
+            tags = {"Index API"})
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200",
