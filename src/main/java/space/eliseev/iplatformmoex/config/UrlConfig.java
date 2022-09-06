@@ -8,9 +8,10 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource("classpath:url-config.yml")
 public class UrlConfig {
 
-    @Value("${feign.engine.url}")
-    private String engineUrl;
+//    @Value("${feign.engine.url}")
+//    private String engineUrl;
+//
+//    @Value("${feign.securities.url}")
+//    private String securitiesUrl;
 
-    @Value("${feign.securities.url}")
-    private String securitiesUrl;
 }
