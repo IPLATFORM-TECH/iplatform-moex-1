@@ -4,9 +4,11 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import java.util.List;
 
 @FeignClient(name="securities", url="${client.post.baseUrl}")
 public interface SecurityClient {
+
     @GetMapping("/securities.json")
     Object getSecurities(@RequestParam("q") String q,
                        @RequestParam("lang") String lang,
@@ -24,4 +26,9 @@ public interface SecurityClient {
                               @RequestParam("boardid") String boardId,
                               @PathVariable("engine") String engine,
                               @PathVariable("market") String market);
+
+    @GetMapping("/security")
+    List<Object> getSecurity(@RequestParam("security") String security,
+                             @RequestParam(value = "lang", required = false) String lang,
+                             @RequestParam(value = "start", required = false) Integer start);
 }

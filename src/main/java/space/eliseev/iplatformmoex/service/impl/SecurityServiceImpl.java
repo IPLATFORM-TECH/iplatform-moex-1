@@ -8,14 +8,15 @@ import space.eliseev.iplatformmoex.client.SecurityClient;
 import space.eliseev.iplatformmoex.model.enumeration.Engine;
 import space.eliseev.iplatformmoex.model.enumeration.Market;
 import space.eliseev.iplatformmoex.service.SecurityService;
-
 import java.util.Optional;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class SecurityServiceImpl implements SecurityService {
 
     private final SecurityClient securityClient;
+    
     @Override
     public Object getSecurities(String q, String lang, Engine engine, Integer isTrading, Market market,
                                 String groupBy, String limit, String groupByFilter, Integer start) {
@@ -35,5 +36,10 @@ public class SecurityServiceImpl implements SecurityService {
                               @NonNull Market market) {
 
         return securityClient.getSecStats(tradingSession, securities, boardId, engine.getName(), market.getName());
+    }
+
+    @Override
+    public List<Object> getSecurity(String security, String lang, Integer start) {
+        return securityClient.getSecurity(security, lang, start);
     }
 }
