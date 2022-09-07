@@ -9278,6 +9278,36 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
+                  value: 1036
+              - column:
+                  name: board_group_id
+                  value: 1032
+              - column:
+                  name: engine_id
+                  value: 9
+              - column:
+                  name: market_id
+                  value: 1031
+              - column:
+                  name: boardid
+                  value: "AIGR"
+              - column:
+                  name: board_title
+                  value: "Агро: Аукционы НТБ"
+              - column:
+                  name: is_traded
+                  value: 1
+              - column:
+                  name: has_candles
+                  value: 1
+              - column:
+                  name: is_primary
+                  value: 1
+        - insert:
+            tableName: board
+            columns:
+              - column:
+                  name: id
                   value: 1090
               - column:
                   name: board_group_id
@@ -9302,7 +9332,7 @@ databaseChangeLog:
                   value: 1
               - column:
                   name: is_primary 
-                  value: 0
+                  value: 1
         - insert:
             tableName: board
             columns:
