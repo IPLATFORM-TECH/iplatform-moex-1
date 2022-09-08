@@ -1,5 +1,6 @@
 package space.eliseev.iplatformmoex.service.impl;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import space.eliseev.iplatformmoex.client.IndexClient;
 import space.eliseev.iplatformmoex.model.dto.IndexDto;
@@ -10,20 +11,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class IndexServiceImp implements IndexService {
 
     final IndexClient indexClient;
 
-    public IndexServiceImp(IndexClient indexClient) {
-        this.indexClient = indexClient;
-    }
-
     @Override
-    public List<Engine> getEngines() {
+    public List<Engine> getEngines(String lang) {
         List<Engine> engines = new ArrayList<>();
-        IndexDto indexDto = indexClient.getIndex();
+        IndexDto indexDto = indexClient.getIndex(lang);
 
-        for (List<String> data: indexDto.getEngines().getData()) {
+        for (List<String> data : indexDto.getEngines().getData()) {
             engines.add(new Engine(
                     Integer.valueOf(data.get(0)),
                     data.get(1),
@@ -33,11 +31,11 @@ public class IndexServiceImp implements IndexService {
     }
 
     @Override
-    public List<Market> getMarkets() {
+    public List<Market> getMarkets(String lang) {
         List<Market> markets = new ArrayList<>();
-        IndexDto indexDto = indexClient.getIndex();
+        IndexDto indexDto = indexClient.getIndex(lang);
 
-        for (List<String> data: indexDto.getMarkets().getData()) {
+        for (List<String> data : indexDto.getMarkets().getData()) {
             markets.add(new Market(
                     Integer.valueOf(data.get(0)),
                     Integer.valueOf(data.get(1)),
@@ -57,11 +55,11 @@ public class IndexServiceImp implements IndexService {
     }
 
     @Override
-    public List<Board> getBoards() {
+    public List<Board> getBoards(String lang) {
         List<Board> boards = new ArrayList<>();
-        IndexDto indexDto = indexClient.getIndex();
+        IndexDto indexDto = indexClient.getIndex(lang);
 
-        for (List<String> data: indexDto.getBoards().getData()) {
+        for (List<String> data : indexDto.getBoards().getData()) {
             boards.add(new Board(
                     Integer.valueOf(data.get(0)),
                     Integer.valueOf(data.get(1)),
@@ -77,11 +75,11 @@ public class IndexServiceImp implements IndexService {
     }
 
     @Override
-    public List<BoardGroup> getBoardGroups() {
+    public List<BoardGroup> getBoardGroups(String lang, space.eliseev.iplatformmoex.model.enumeration.Engine engine, Integer isTraded) {
         List<BoardGroup> boardGroups = new ArrayList<>();
-        IndexDto indexDto = indexClient.getIndex();
+        IndexDto indexDto = indexClient.getIndex(lang);
 
-        for (List<String> data: indexDto.getBoardgroups().getData()) {
+        for (List<String> data : indexDto.getBoardgroups().getData()) {
             boardGroups.add(new BoardGroup(
                     Integer.valueOf(data.get(0)),
                     Integer.valueOf(data.get(1)),
@@ -100,12 +98,13 @@ public class IndexServiceImp implements IndexService {
         return boardGroups;
     }
 
-    @Override
-    public List<Duration> getDurations() {
-        List<Duration> durations = new ArrayList<>();
-        IndexDto indexDto = indexClient.getIndex();
 
-        for (List<String> data: indexDto.getDurations().getData()) {
+    @Override
+    public List<Duration> getDurations(String lang) {
+        List<Duration> durations = new ArrayList<>();
+        IndexDto indexDto = indexClient.getIndex(lang);
+
+        for (List<String> data : indexDto.getDurations().getData()) {
             durations.add(new Duration(
                     Integer.valueOf(data.get(0)),
                     Integer.valueOf(data.get(1)),
@@ -117,11 +116,11 @@ public class IndexServiceImp implements IndexService {
     }
 
     @Override
-    public List<SecurityType> getSecurityTypes() {
+    public List<SecurityType> getSecurityTypes(String lang, space.eliseev.iplatformmoex.model.enumeration.Engine engine) {
         List<SecurityType> securityTypes = new ArrayList<>();
-        IndexDto indexDto = indexClient.getIndex();
+        IndexDto indexDto = indexClient.getIndex(lang);
 
-        for (List<String> data: indexDto.getSecuritytypes().getData()) {
+        for (List<String> data : indexDto.getSecuritytypes().getData()) {
             securityTypes.add(new SecurityType(
                     Integer.valueOf(data.get(0)),
                     Integer.valueOf(data.get(1)),
@@ -135,11 +134,12 @@ public class IndexServiceImp implements IndexService {
     }
 
     @Override
-    public List<SecurityGroup> getSecurityGroups() {
+    public List<SecurityGroup> getSecurityGroups(String lang, Integer hideInactive,
+                                                 space.eliseev.iplatformmoex.model.enumeration.SecurityGroup securityGroup, Integer tradeEngine) {
         List<SecurityGroup> securityGroups = new ArrayList<>();
-        IndexDto indexDto = indexClient.getIndex();
+        IndexDto indexDto = indexClient.getIndex(lang);
 
-        for (List<String> data: indexDto.getSecuritygroups().getData()) {
+        for (List<String> data : indexDto.getSecuritygroups().getData()) {
             securityGroups.add(new SecurityGroup(
                     Integer.valueOf(data.get(0)),
                     data.get(1),
@@ -150,11 +150,11 @@ public class IndexServiceImp implements IndexService {
     }
 
     @Override
-    public List<SecurityCollection> getSecurityCollections() {
+    public List<SecurityCollection> getSecurityCollections(String lang) {
         List<SecurityCollection> securityCollections = new ArrayList<>();
-        IndexDto indexDto = indexClient.getIndex();
+        IndexDto indexDto = indexClient.getIndex(lang);
 
-        for (List<String> data: indexDto.getSecuritycollections().getData()) {
+        for (List<String> data : indexDto.getSecuritycollections().getData()) {
             securityCollections.add(new SecurityCollection(
                     Integer.valueOf(data.get(0)),
                     data.get(1),
