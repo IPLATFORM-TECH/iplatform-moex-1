@@ -79,7 +79,7 @@ public class IndexController {
     }
 
     @Operation(
-            summary = "Gets BoardGroups",
+            summary = "Gets  BoardGroupsr (seach by arguments)",
             description = "Получить список BoardGroups (язык результата: ru или en)",
             tags = {"Index API"})
     @ApiResponses(value = {
@@ -92,7 +92,7 @@ public class IndexController {
     })
     @GetMapping("/getBoardGroups")
     public ResponseEntity<List<BoardGroup>> getBoardGroups(@RequestParam(defaultValue = "ru") String lang,
-                                                           @RequestParam(value = "engine", required = false)
+                                                           @RequestParam(value = "engine")
                                                            space.eliseev.iplatformmoex.model.enumeration.Engine engine,
                                                            @RequestParam(defaultValue = "0", required = false) Integer isTraded) {
         return new ResponseEntity<>(indexService.getBoardGroups(lang, engine, isTraded), HttpStatus.OK);
@@ -116,7 +116,7 @@ public class IndexController {
     }
 
     @Operation(
-            summary = "Gets SecurityTypes",
+            summary = "Gets SecurityTypes (seach by arguments)",
             description = "Получить список SecurityTypes (язык результата: ru или en)",
             tags = {"Index API"})
     @ApiResponses(value = {
@@ -129,14 +129,14 @@ public class IndexController {
     })
     @GetMapping("/getSecurityTipes")
     public ResponseEntity<List<SecurityType>> getSecurityTypes(@RequestParam(defaultValue = "ru") String lang,
-                                                               @RequestParam(value = "engine", required = false)
+                                                               @RequestParam(value = "engine")
                                                                space.eliseev.iplatformmoex.model.enumeration.Engine engine) {
         return new ResponseEntity<>(indexService.getSecurityTypes(lang, engine), HttpStatus.OK);
     }
 
 
     @Operation(
-            summary = "Gets SecurityGroups",
+            summary = "Gets SecurityGroups (seach by arguments)",
             description = "Получить список SecurityGroups (язык результата: ru или en)",
             tags = {"Index API"})
     @ApiResponses(value = {
@@ -152,7 +152,7 @@ public class IndexController {
                                                                  @RequestParam(value = "hide_inactive", defaultValue = "0") Integer hideInactive,
                                                                  @RequestParam(value = "securitygroups")
                                                                  space.eliseev.iplatformmoex.model.enumeration.SecurityGroup securityGroup,
-                                                                 @RequestParam(value = "trade_engine") Integer tradeEngine) {
+                                                                 @RequestParam(value = "trade_engine", required = false) Integer tradeEngine) {
         return new ResponseEntity<>(indexService.getSecurityGroups(lang, hideInactive, securityGroup, tradeEngine), HttpStatus.OK);
     }
 

@@ -9,6 +9,7 @@ import space.eliseev.iplatformmoex.service.IndexService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -80,20 +81,24 @@ public class IndexServiceImp implements IndexService {
         IndexDto indexDto = indexClient.getIndex(lang);
 
         for (List<String> data : indexDto.getBoardgroups().getData()) {
-            boardGroups.add(new BoardGroup(
-                    Integer.valueOf(data.get(0)),
-                    Integer.valueOf(data.get(1)),
-                    data.get(2),
-                    data.get(3),
-                    Integer.valueOf(data.get(4)),
-                    data.get(5),
-                    data.get(6),
-                    data.get(7),
-                    Integer.valueOf(data.get(8)),
-                    Integer.valueOf(data.get(9)),
-                    Integer.valueOf(data.get(10)),
-                    (data.get(11) == null ? null : Integer.valueOf(data.get(11))),
-                    data.get(12)));
+            if ((Objects.equals(data.get(2), engine.getName())) && (Objects.equals(data.get(10), isTraded.toString()))) {
+                boardGroups.add(new BoardGroup(
+                        Integer.valueOf(data.get(0)),
+                        Integer.valueOf(data.get(1)),
+                        data.get(2),
+                        data.get(3),
+                        Integer.valueOf(data.get(4)),
+                        data.get(5),
+                        data.get(6),
+                        data.get(7),
+                        Integer.valueOf(data.get(8)),
+                        Integer.valueOf(data.get(9)),
+                        Integer.valueOf(data.get(10)),
+                        (data.get(11) == null ? null : Integer.valueOf(data.get(11))),
+                        data.get(12)));
+            } else {
+                continue;
+            }
         }
         return boardGroups;
     }
@@ -121,14 +126,18 @@ public class IndexServiceImp implements IndexService {
         IndexDto indexDto = indexClient.getIndex(lang);
 
         for (List<String> data : indexDto.getSecuritytypes().getData()) {
-            securityTypes.add(new SecurityType(
-                    Integer.valueOf(data.get(0)),
-                    Integer.valueOf(data.get(1)),
-                    data.get(2),
-                    data.get(3),
-                    data.get(4),
-                    data.get(5),
-                    data.get(6)));
+            if (Objects.equals(data.get(2), engine.getName())) {
+                securityTypes.add(new SecurityType(
+                        Integer.valueOf(data.get(0)),
+                        Integer.valueOf(data.get(1)),
+                        data.get(2),
+                        data.get(3),
+                        data.get(4),
+                        data.get(5),
+                        data.get(6)));
+            } else {
+                continue;
+            }
         }
         return securityTypes;
     }
@@ -140,11 +149,15 @@ public class IndexServiceImp implements IndexService {
         IndexDto indexDto = indexClient.getIndex(lang);
 
         for (List<String> data : indexDto.getSecuritygroups().getData()) {
-            securityGroups.add(new SecurityGroup(
-                    Integer.valueOf(data.get(0)),
-                    data.get(1),
-                    data.get(2),
-                    Integer.valueOf(data.get(3))));
+            if ((Objects.equals(data.get(1), securityGroup.getName())) && (Objects.equals(data.get(3), hideInactive.toString()))) {
+                securityGroups.add(new SecurityGroup(
+                        Integer.valueOf(data.get(0)),
+                        data.get(1),
+                        data.get(2),
+                        Integer.valueOf(data.get(3))));
+            } else {
+                continue;
+            }
         }
         return securityGroups;
     }
