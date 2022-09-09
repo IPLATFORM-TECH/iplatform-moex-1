@@ -6,12 +6,20 @@ import java.util.List;
 
 public interface IndexService {
 
-    List<Engine> getEngines();
-    List<Market> getMarkets();
-    List<Board> getBoards();
-    List<BoardGroup> getBoardGroups();
-    List<Duration> getDurations();
-    List<SecurityType> getSecurityTypes();
-    List<SecurityGroup> getSecurityGroups();
-    List<SecurityCollection> getSecurityCollections();
+    List<Engine> getEngines(String lang);
+
+    List<Market> getMarkets(String lang);
+
+    List<Board> getBoards(String lang);
+
+    List<BoardGroup> getBoardGroups(String lang, space.eliseev.iplatformmoex.model.enumeration.Engine engine, Integer isTraded);
+
+    List<Duration> getDurations(String lang);
+
+    List<SecurityType> getSecurityTypes(String lang, space.eliseev.iplatformmoex.model.enumeration.Engine engine);
+
+    List<SecurityGroup> getSecurityGroups(String lang, Integer hideInactive, space.eliseev.iplatformmoex.model.enumeration.SecurityGroup securityGroup, Integer tradeEngine);
+
+    List<SecurityCollection> getSecurityCollections(String lang);
+
 }
