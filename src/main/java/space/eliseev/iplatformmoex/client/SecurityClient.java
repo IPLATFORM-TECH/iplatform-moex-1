@@ -22,13 +22,13 @@ public interface SecurityClient {
                          @PathVariable("group_by_filter") String groupByFilter,
                          @PathVariable("start") Integer start);
 
-    @GetMapping("/security.json")
-    Object getSecurity(@RequestParam("security") String security,
-                             @RequestParam(value = "lang", required = false) String lang,
-                             @RequestParam(value = "start", required = false) Integer start);
+    @GetMapping("/{security}")
+    Object getSecurity(@PathVariable("security") String security,
+                       @RequestParam(value = "lang", required = false) String lang,
+                       @RequestParam(value = "start", required = false) Integer start);
 
-    @GetMapping(value = "/{security}/aggregates.json?lang={lang}&date={date}")
+    @GetMapping("/{security}/aggregates.json")
     Object getSecurityAggregates(@PathVariable("security") String security,
-                                 @PathVariable("lang") String lang,
-                                 @PathVariable("date") String date);
+                                 @RequestParam("lang") String lang,
+                                 @RequestParam("date") String date);
 }
