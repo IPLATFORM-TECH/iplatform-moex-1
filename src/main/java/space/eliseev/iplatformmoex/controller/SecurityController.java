@@ -14,26 +14,34 @@ import space.eliseev.iplatformmoex.service.SecurityService;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/security")
+@RequestMapping(value = "/security", produces = "application/json; charset=UTF-8")
 public class SecurityController {
 
     private final SecurityService securityService;
 
-    @GetMapping
-    public ResponseEntity<Object> convertCurrencyFeign(
+    @GetMapping("/getSecurities")
+    public ResponseEntity<Object> getSecurities(
             @RequestParam(value = "q", required = false) String q,
-            @RequestParam(value = "lang", required = false) String lang,
+            @RequestParam(value = "lang", defaultValue = "ru", required = false) String lang,
             @RequestParam(value = "engine", required = false) Engine engine,
             @RequestParam(value = "is_trading", required = false) Integer isTrading,
             @RequestParam(value = "market", required = false) Market market,
             @RequestParam(value = "group_by", required = false) String groupBy,
-            @RequestParam(value = "limit", required = false) Integer limit,
+            @RequestParam(value = "limit", defaultValue = "100", required = false) String limit,
             @RequestParam(value = "group_by_filter", required = false) String groupByFilter,
-            @RequestParam(value = "start", required = false) Integer start) {
+            @RequestParam(value = "start", defaultValue = "0", required = false) Integer start) {
 
         return new ResponseEntity<>(securityService.getSecurities(q, lang,
                 engine, isTrading, market, groupBy, limit, groupByFilter, start), HttpStatus.OK);
     }
+
+    @GetMapping("/getSecStats")
+    public ResponseEntity<Object> getSecStats(@RequestParam(name = "tradingsession", required = false) String tradingSession,
+                                              @RequestParam(name = "securities", required = false) String securities,
+                                              @RequestParam(name = "boardid", required = false) String boardId,
+                                              @RequestParam(name = "engine") Engine engine,
+                                              @RequestParam(name = "market") Market market) {
+        return new ResponseEntity<>(securityService.getSecStats(tradingSession, securities, boardId, engine, market), HttpStatus.OK);
 
     @GetMapping("/getSecurity")
     public ResponseEntity<Object> getSecurity(@RequestParam("security") String security,
