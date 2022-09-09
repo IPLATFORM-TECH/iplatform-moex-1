@@ -13,4 +13,5 @@ public class UrlConfig {
 
     @Value("${feign.securities.url}")
     private String securitiesUrl;
+
 }
