@@ -8,48 +8,6 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 51
-              - column:
-                  name: trade_engine_id
-                  value: 9
-              - column:
-                  name: trade_engine_name
-                  value: "agro"
-              - column:
-                  name: trade_engine_title
-                  value: "Агро"
-              - column:
-                  name: market_name
-                  value: "sugar"
-              - column:
-                  name: market_title
-                  value: "Торги сахаром"
-              - column:
-                  name: market_id
-                  value: 51
-              - column:
-                  name: marketplace
-                  value: null
-              - column:
-                  name: is_otc
-                  value: 0
-              - column:
-                  name: has_history_files
-                  value: 0
-              - column:
-                  name: has_history_trades_files
-                  value: 0
-              - column:
-                  name: has_trades
-                  value: 1
-              - column:
-                  name: has_history
-                  value: 1
-        - insert:
-            tableName: market
-            columns:
-              - column:
-                  name: id
                   value: 5
               - column:
                   name: trade_engine_id
@@ -1539,6 +1497,90 @@ databaseChangeLog:
               - column:
                   name: market_id
                   value: 20
+              - column:
+                  name: marketplace
+                  value: null
+              - column:
+                  name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 0
+              - column:
+                  name: has_history
+                  value: 0
+        - insert:
+            tableName: market
+            columns:
+              - column:
+                  name: id
+                  value: 51
+              - column:
+                  name: trade_engine_id
+                  value: 9
+              - column:
+                  name: trade_engine_name
+                  value: "agro"
+              - column:
+                  name: trade_engine_title
+                  value: "Агро"
+              - column:
+                  name: market_name
+                  value: "sugar"
+              - column:
+                  name: market_title
+                  value: "Торги сахаром"
+              - column:
+                  name: market_id
+                  value: 51
+              - column:
+                  name: marketplace
+                  value: null
+              - column:
+                  name: is_otc
+                  value: 0
+              - column:
+                  name: has_history_files
+                  value: 0
+              - column:
+                  name: has_history_trades_files
+                  value: 0
+              - column:
+                  name: has_trades
+                  value: 1
+              - column:
+                  name: has_history
+                  value: 1
+        - insert:
+            tableName: market
+            columns:
+              - column:
+                  name: id
+                  value: 1031
+              - column:
+                  name: trade_engine_id
+                  value: 9
+              - column:
+                  name: trade_engine_name
+                  value: agro
+              - column:
+                  name: trade_engine_title
+                  value: "Агро"
+              - column:
+                  name: market_name
+                  value: "auctions"
+              - column:
+                  name: market_title
+                  value: "Аукционы НТБ"
+              - column:
+                  name: market_id
+                  value: 1031
               - column:
                   name: marketplace
                   value: null
