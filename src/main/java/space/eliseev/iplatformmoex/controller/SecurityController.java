@@ -64,7 +64,7 @@ public class SecurityController {
     }
 
     @Operation(
-            summary = "Get all Securities",
+            summary = "Subtotals of the day",
             description = "Получить промежуточные итоги дня",
             tags = "Security API"
     )
@@ -86,7 +86,7 @@ public class SecurityController {
     }
 
     @Operation(
-            summary = "Get all Securities",
+            summary = "Tool specification",
             description = "Получить спецификацию инструмента",
             tags = "Security API"
     )
@@ -108,7 +108,7 @@ public class SecurityController {
     }
 
     @Operation(
-            summary = "Get all Securities",
+            summary = "Aggregate totals",
             description = "Получить агрегированные итоги торгов за дату по рынкам",
             tags = "Security API"
     )
