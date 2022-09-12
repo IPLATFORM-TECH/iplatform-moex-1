@@ -130,4 +130,12 @@ public class SecurityController {
         return new ResponseEntity<>(securityService.getSecurityAggregates(security, lang, date), HttpStatus.OK);
     }
 
+    @GetMapping("/indices")
+    public ResponseEntity<Object> getSecurityIndices(
+            @RequestParam(value = "security") String security,
+            @RequestParam(value = "lang", defaultValue = "ru") String lang,
+            @RequestParam(value = "only_actual", defaultValue = "0") Integer onlyActual) {
+
+        return new ResponseEntity<>(securityService.getSecurityIndices(security, lang, onlyActual), HttpStatus.OK);
+    }
 }

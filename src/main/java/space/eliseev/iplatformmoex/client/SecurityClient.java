@@ -4,7 +4,6 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import java.util.List;
 
 
 @FeignClient(name = "securities", url = "${client.post.baseUrl}")
@@ -37,4 +36,9 @@ public interface SecurityClient {
     Object getSecurityAggregates(@PathVariable("security") String security,
                                  @RequestParam("lang") String lang,
                                  @RequestParam("date") String date);
+
+    @GetMapping("/securities/{security}/indices.json")
+    Object getSecurityIndices(@PathVariable("security") String security,
+                              @RequestParam(value = "lang", defaultValue = "ru") String lang,
+                              @RequestParam(value = "only_actual", defaultValue = "0") Integer onlyActual);
 }
