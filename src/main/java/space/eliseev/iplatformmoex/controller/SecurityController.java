@@ -42,14 +42,14 @@ public class SecurityController {
                                               @RequestParam(name = "engine") Engine engine,
                                               @RequestParam(name = "market") Market market) {
         return new ResponseEntity<>(securityService.getSecStats(tradingSession, securities, boardId, engine, market), HttpStatus.OK);
-
-    @GetMapping("/getSecurity")
-    public ResponseEntity<Object> getSecurity(@RequestParam("security") String security,
-                                                    @RequestParam(value = "lang", required = false) String lang,
-                                                    @RequestParam(value = "start", required = false) Integer start) {
-
-        return ResponseEntity.ok().body(securityService.getSecurity(security, lang, start));
     }
+        @GetMapping("/getSecurity")
+        public ResponseEntity<Object> getSecurity(@RequestParam("security") String security,
+                @RequestParam(value = "lang", required = false) String lang,
+                @RequestParam(value = "start", required = false) Integer start) {
+
+            return ResponseEntity.ok().body(securityService.getSecurity(security, lang, start));
+        }
 
     @GetMapping(value = "/security/aggregates", produces = "application/json; charset=UTF-8")
     public ResponseEntity<Object> getSecurityAggregates(
@@ -60,4 +60,12 @@ public class SecurityController {
         return new ResponseEntity<>(securityService.getSecurityAggregates(security, lang, date), HttpStatus.OK);
     }
 
+    @GetMapping("/indices")
+    public ResponseEntity<Object> getSecurityIndices(
+            @RequestParam(value = "security") String security,
+            @RequestParam(value = "lang", defaultValue = "ru") String lang,
+            @RequestParam(value = "only_actual", defaultValue = "0") Integer only_actual) {
+
+        return new ResponseEntity<>(securityService.getSecurityIndices(security, lang, only_actual), HttpStatus.OK);
+    }
 }

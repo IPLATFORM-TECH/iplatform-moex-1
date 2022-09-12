@@ -48,4 +48,9 @@ public class SecurityServiceImpl implements SecurityService {
         return securityClient.getSecurityAggregates(security, lang, date);
 
     }
+
+    @Override
+    public Object getSecurityIndices(String security, String lang, Integer only_actual) {
+        return securityClient.getSecurityIndices(security, lang, only_actual);
+    }
 }
