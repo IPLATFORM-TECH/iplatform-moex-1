@@ -32,6 +32,6 @@ public interface SecurityService {
 
     Object getSecurityIndices(String security,
                               String lang,
-                              Integer only_actual);
+                              Integer onlyActual);
 
 }

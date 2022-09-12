@@ -134,8 +134,8 @@ public class SecurityController {
     public ResponseEntity<Object> getSecurityIndices(
             @RequestParam(value = "security") String security,
             @RequestParam(value = "lang", defaultValue = "ru") String lang,
-            @RequestParam(value = "only_actual", defaultValue = "0") Integer only_actual) {
+            @RequestParam(value = "only_actual", defaultValue = "0") Integer onlyActual) {
 
-        return new ResponseEntity<>(securityService.getSecurityIndices(security, lang, only_actual), HttpStatus.OK);
+        return new ResponseEntity<>(securityService.getSecurityIndices(security, lang, onlyActual), HttpStatus.OK);
     }
 }

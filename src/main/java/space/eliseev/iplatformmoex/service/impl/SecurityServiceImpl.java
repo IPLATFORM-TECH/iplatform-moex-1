@@ -50,7 +50,7 @@ public class SecurityServiceImpl implements SecurityService {
     }
 
     @Override
-    public Object getSecurityIndices(String security, String lang, Integer only_actual) {
-        return securityClient.getSecurityIndices(security, lang, only_actual);
+    public Object getSecurityIndices(String security, String lang, Integer onlyActual) {
+        return securityClient.getSecurityIndices(security, lang, onlyActual);
     }
 }
