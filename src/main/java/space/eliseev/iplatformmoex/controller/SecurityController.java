@@ -130,6 +130,20 @@ public class SecurityController {
         return new ResponseEntity<>(securityService.getSecurityAggregates(security, lang, date), HttpStatus.OK);
     }
 
+    @Operation(
+            summary = "Security's indices",
+            description = "Получить список индексов, в которые входит бумага",
+            tags = "Security API"
+    )
+    @Parameter(description = "seqid выбранной ценной бумаги", required = true, name = "security")
+    @Parameter(description = "Язык описания", required = false, name = "lang")
+    @Parameter(description = "Выводить только акутальные индексы", required = false, name = "onlyActual")
+    @ApiResponses(value = {
+            @ApiResponse(
+                    responseCode = "200",
+                    content = @Content(mediaType = "application/json"),
+                    description = "Successful operation")
+    })
     @GetMapping("/indices")
     public ResponseEntity<Object> getSecurityIndices(
             @RequestParam(value = "security") String security,
